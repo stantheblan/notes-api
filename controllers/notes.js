@@ -34,6 +34,8 @@ router.post('/', (req, res)=>{
     });
 });
 
+
+
 // Show
 router.get('/:id', (req, res) => {
     Notes.findById(req.params.id, (err, foundNote) => {
