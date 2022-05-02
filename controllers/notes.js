@@ -3,7 +3,7 @@ const router = express.Router();
 const Notes = require('../models/notes.js');
 
 // index
-router.get('/notes-frontend', (req, res)=>{
+router.get('/', (req, res)=>{
     Notes.find({}, (err, foundNotes)=>{
         res.json(foundNotes);
     });
@@ -28,7 +28,7 @@ router.put('/:id', (req, res)=>{
 });
 
 //create 
-router.post('/notes-frontend', (req, res)=>{
+router.post('/', (req, res)=>{
     Notes.create(req.body, (err, createdNote)=>{
         res.json(createdNote);
     });
